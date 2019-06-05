@@ -1,9 +1,8 @@
 <?php
 
-function hello(        ) {
-
-       
-                return 'hello';
+function hello()
+{
+    return 'hello';
 }
 
 echo hello();

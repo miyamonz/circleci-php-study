@@ -1,0 +1,24 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.3-cli
+    steps:
+      - checkout
+
+      - run: sudo apt update
+
+      - restore_cache:
+          keys:
+            - composer-deps-{{ checksum "composer.lock" }}
+            - composer-deps
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          key: composer-deps-{{ checksum "composer.lock" }}
+          paths:
+            - ./vendor
+
+      - run: 
+          name: Run php-cs-fixer
+          command: vendor/bin/php-cs-fixer --diff --dry-run -v fix .

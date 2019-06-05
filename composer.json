@@ -1,0 +1,13 @@
+{
+    "name": "miyamonz/circleci-php-study",
+    "authors": [
+        {
+            "name": "Koichi Miyamoto",
+            "email": "m5813k@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15"
+    }
+}

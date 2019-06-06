@@ -6,6 +6,11 @@
             "email": "m5813k@gmail.com"
         }
     ],
+    "autoload": {
+      "psr-4": {
+        "myapp\\": "src/"
+      }
+    },
     "require": {},
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.15",

@@ -1,8 +1,5 @@
 <?php
+require_once "./vendor/autoload.php";
 
-function hello()
-{
-    return 'hello';
-}
-
-echo hello();
+$hello = new myapp\Hello;
+echo $hello('hai');

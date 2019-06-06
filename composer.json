@@ -6,8 +6,14 @@
             "email": "m5813k@gmail.com"
         }
     ],
+    "autoload": {
+      "psr-4": {
+        "myapp\\": "src/"
+      }
+    },
     "require": {},
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.15"
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "phpstan/phpstan": "^0.11.8"
     }
 }
